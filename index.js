@@ -24,8 +24,15 @@ var app = express();
 
 app.use(cors());
 
-app.get("/", function (req, res, next) {
-  res.json({ msg: "This is CORS-enabled for all origins!" });
+app.get("/askGPT", async function (req, res, next) {
+  let question = req.query.question;
+  let history = "";
+
+  let reply = {};
+  if (question) {
+    reply = await askGPT(question, directory, history);
+  }
+  res.json(reply);
 });
 
 app.listen(3000, function () {
