@@ -20,8 +20,11 @@
   "homepage": "https://github.com/codesandbox-app/static-template#readme",
   "devDependencies": {},
   "dependencies": {
-    "langchain": "^0.0.76",
-    "nodemon": "^2.0.20"
+    "dotenv": "^16.0.3",
+    "hnswlib-node": "^1.4.2",
+    "langchain": "^0.0.77",
+    "nodemon": "^2.0.20",
+    "pdf-parse": "^1.1.1"
   },
   "type": "module"
 }
